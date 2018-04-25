@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Angular 2 App</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.js"></script>
+        
+        <script src="node_modules/es6-shim/es6-shim.js"></script>
+        <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+        <script src="node_modules/systemjs/dist/system.src.js"></script>
+        <script src="node_modules/rxjs/bundles/Rx.js"></script>
+        <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+    <style>
+    .selected {
+        border : 2px solid black;
+    }
+
+    </style>
+    </head>
+    <body>
+    <script>
+    System.config({
+        packages: {
+            app: {
+                format: 'register',
+                defaultExtension: 'js'
+            }
+        }
+    });
+    System.import('/public/app.js')
+        .then(null, console.error.bind(console));
+    </script>
+        
+        <inventory></inventory>
+
+    </body>
+</html>
